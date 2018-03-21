@@ -1,10 +1,10 @@
 import { DataService } from './services/data.service';
 
 export class Account {
-	private username:string;
-	private password:string;
+	username:string;
+	password:string;
 
-	constructor(username, password, private dataService:DataService){
+	constructor(private dataService:DataService){
 		console.log('account constructor running..');
 	}
 
