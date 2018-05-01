@@ -1,3 +1,19 @@
-<p>
-  trip-detail works!
-</p>
+<div class="container">
+  <h1>{{ trip.title }}</h1>
+  <dl class="list">
+    <dt>Title</dt>
+    <dd>{{ trip.title }}</dd>
+    <dt>Sponsor</dt>
+    <dd>{{ trip.sponsor }}</dd>
+    <dt>Date</dt>
+    <dd>{{ trip.date }}</dd>
+    <dt>Update Date</dt>
+    <dd>{{ trip.updated_at }}</dd>
+  </dl>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/trip-edit', trip._id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button" (click)="deleteTrip(trip._id)">DELETE</button>
+  </div>
+</div>

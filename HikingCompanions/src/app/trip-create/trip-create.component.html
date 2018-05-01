@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Add New Trip</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveTrip()" #tripForm="ngForm">
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input type="text" class="form-control" [(ngModel)]="trip.title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Sponsor</label>
+          <input type="text" class="form-control" [(ngModel)]="trip.sponsor" name="sponsor" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!tripForm.form.valid">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

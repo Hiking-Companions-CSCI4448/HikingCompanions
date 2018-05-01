@@ -10,12 +10,29 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule, Routes } from '@angular/router';
 import { TripDetailComponent } from './trip-detail/trip-detail.component';
+import { TripCreateComponent } from './trip-create/trip-create.component';
+import { TripEditComponent } from './trip-edit/trip-edit.component';
 
 const appRoutes: Routes = [
   {
     path: 'trips',
     component: TripComponent,
     data: { title: 'Trip List' }
+  },
+  {
+    path: 'trip-details/:id',
+    component: TripDetailComponent,
+    data: { title: 'Trip Details' }
+  },
+  {
+    path: 'trip-create',
+    component: TripCreateComponent,
+    data: { title: 'Create Trip' }
+  },
+  {
+    path: 'trip-edit/:id',
+    component: TripEditComponent,
+    data: { title: 'Edit Trip' }
   },
   { path: '',
     redirectTo: '/trips',
@@ -27,7 +44,9 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     TripComponent,
-    TripDetailComponent
+    TripDetailComponent,
+    TripCreateComponent,
+    TripEditComponent,
   ],
   imports: [
     BrowserModule,
