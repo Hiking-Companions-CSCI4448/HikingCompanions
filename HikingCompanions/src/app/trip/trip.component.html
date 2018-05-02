@@ -8,15 +8,19 @@
     <thead>
       <tr>
         <th>Title</th>
-        <th>Author</th>
+        <th>Destination</th>
+        <th>Date</th>
+        <th>Sponsor</th>
         <th>Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let trip of trips">
         <td>{{ trip.title }}</td>
+        <td>{{ trip.destination }}</td>
+        <td>{{ trip.date }}</td>
         <td>{{ trip.sponsor }}</td>
-        <td>Show Detail</td>
+        <td><a [routerLink]="['/trip-details', trip._id]">Show Detail</a></td>
       </tr>
     </tbody>
   </table>
