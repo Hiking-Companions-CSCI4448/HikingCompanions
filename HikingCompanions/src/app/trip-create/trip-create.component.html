@@ -8,8 +8,28 @@
           <input type="text" class="form-control" [(ngModel)]="trip.title" name="title" required>
         </div>
         <div class="form-group">
+          <label for="name">Destination</label>
+          <input type="text" class="form-control" [(ngModel)]="trip.destination" name="destination" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Date</label>
+          <input type="text" class="form-control" [(ngModel)]="trip.date" name="date" required>
+        </div>
+        <div class="form-group">
           <label for="name">Sponsor</label>
           <input type="text" class="form-control" [(ngModel)]="trip.sponsor" name="sponsor" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Phone</label>
+          <input type="text" class="form-control" [(ngModel)]="trip.phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Email</label>
+          <input type="text" class="form-control" [(ngModel)]="trip.email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Description</label>
+          <input type="text" class="form-control" [(ngModel)]="trip.description" name="description" required>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-success" [disabled]="!tripForm.form.valid">Save</button>

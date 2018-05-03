@@ -33,4 +33,8 @@ export class TripDetailComponent implements OnInit {
       }
     );
   }
+
+  returnToMain(id) {
+    this.router.navigate(['/trips']);
+  }
 }

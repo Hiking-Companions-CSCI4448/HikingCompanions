@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var TripSchema = new mongoose.Schema({
-  date: Date,
+  date: String,
   title: String,
   destination: String,
   sponsor: String,
